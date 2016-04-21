@@ -1,1 +1,135 @@
-teste 
+Atividade 2:
+2.1)Tecnicas de elicitacao de requisitos mais utilizadas (entrevistas, prototipacao e questionarios)
+- Metodo escolhido: entrevista
+
+2.2)Elaboracao de Casos de Uso
+- Sistema devera oferecer as quatro operacoes basicas matematicas (soma, divisao, subtracao e multiplicacao)
+- No sistema, cada operacao devera conter um botao para realizar as operacoes
+- Sistema devera ter um display para mostrar os numeros e resultado das operacoes.
+- Sistema devera ter um botao de "=" para realizar a operacao selecionada e mostrar resultado no display
+
+caso de uso textual Soma:
+identificador: 1
+nome: Soma
+prioridade: 1
+criticalidade: 1
+fonte da onde veio: Cliente
+responsavel: Lucas
+descricao: Efetuar soma matematica
+trigger o que dispara esse caso de uso: botao contendo simbolo "+"
+atores: usuario da calculadora
+pre-condicoes: Ter um numero ja selecionado antes de pressionar o botao contendo simbolo "+"
+pos-condicoes: Entrar com outro numero depois de pressionar o botao contendo simbolo "+"
+resultado: indicar operacao selecionada
+cenario principal: ator entra com o primeiro valor, pressiona o "+" e depois entra com o segundo valor
+cenario alternativo: ator entra com o "+" antes de selecionar valor, causara o nao funcionamento correto 
+
+
+caso de uso textual subtracao:
+identificador: 2
+nome: Soma
+prioridade: 1
+criticalidade: 1
+fonte da onde veio: Cliente
+responsavel: Lucas
+descricao: Efetuar subtracao matematica
+trigger o que dispara esse caso de uso: botao contendo simbolo "-"
+atores: usuario da calculadora
+pre-condicoes: Ter um numero ja selecionado antes de pressionar o botao contendo simbolo "-"
+pos-condicoes: Entrar com outro numero depois de pressionar o botao contendo simbolo "-"
+resultado: indicar operacao selecionada
+cenario principal: ator entra com o primeiro valor, pressiona o "-" e depois entra com o segundo valor
+cenario alternativo: ator entra com o "-" antes de selecionar valor, causara o nao funcionamento correto 
+
+caso de uso textual divisao:
+identificador: 3
+nome: Soma
+prioridade: 1
+criticalidade: 1
+fonte da onde veio: Cliente
+responsavel: Lucas
+descricao: Efetuar divisao matematica
+trigger o que dispara esse caso de uso: botao contendo simbolo "/"
+atores: usuario da calculadora
+pre-condicoes: Ter um numero ja selecionado antes de pressionar o botao contendo simbolo "/"
+pos-condicoes: Entrar com outro numero depois de pressionar o botao contendo simbolo "/"
+resultado: indicar operacao selecionada
+cenario principal: ator entra com o primeiro valor, pressiona o "/" e depois entra com o segundo valor
+cenario alternativo: ator entra com o "/" antes de selecionar valor, causara o nao funcionamento correto 
+
+caso de uso textual multiplicacao:
+identificador: 4
+nome: Soma
+prioridade: 1
+criticalidade: 1
+fonte da onde veio: Cliente
+responsavel: Lucas
+descricao: Efetuar multiplicacao matematica
+trigger o que dispara esse caso de uso: botao contendo simbolo "X"
+atores: usuario da calculadora
+pre-condicoes: Ter um numero ja selecionado antes de pressionar o botao contendo simbolo "X"
+pos-condicoes: Entrar com outro numero depois de pressionar o botao contendo simbolo "X"
+resultado: indicar operacao selecionada
+cenario principal: ator entra com o primeiro valor, pressiona o "X" e depois entra com o segundo valor
+cenario alternativo: ator entra com o "X" antes de selecionar valor, causara o nao funcionamento correto 
+
+caso de uso textual Resultado:
+identificador: 5
+nome: Soma
+prioridade: 1
+criticalidade: 1
+fonte da onde veio: Cliente
+responsavel: Lucas
+descricao: Efetuar operacao matematica
+trigger o que dispara esse caso de uso: botao contendo simbolo "="
+atores: usuario da calculadora
+pre-condicoes: Ter um numero ja selecionado inicialmente, seguido do operador matematico e por fim um segundo numero para efetuar a operacao antes de pressionar o botao contendo simbolo "="
+pos-condicoes: Apos pressionar o botao contendo simbolo "=" o valor do resultado da operacao matematica selecionado sera exibido no display
+resultado: indicar o resultado da operacao
+cenario principal: ator entra com o primeiro valor, seleciona a operacao matematica, seleciona o segundo valor e pressiona o "=" para exibir resultado final
+
+2.3)Documento de especificacao
+-Historico de revisao
+Data:11/04/2016
+versao: 1.0
+descricao: Notas Iniciais
+Autor: Lucas
+
+-Sumario
+--------------------------------------------------------
+
+2.3.1)introducao
+2.3.1.1)escopo
+-Sistema desenvolvido para efetuar operacoes basicas matematicas
+
+2.3.1.2)descricao dos stakeholders
+-Usuario do sistema
+
+
+2.3.2)descricao geral
+2.3.2.1)descricao do publico alvo
+-Usuarios que buscam um sistema para efetuar contas usando as operacoes basicas matematicas 
+
+2.3.2.2)restricoes
+-Nao existe restricoes, qualquer pessoa podera utilizar todas as funcoes do sistema 
+
+2.3.3)requisitos
+2.3.3.1)requsitos funcionais
+-Realizar operacoes matematicas (soma, subtracao, divisao e multiplicacao) de maneira simples
+
+2.3.3.2)requsitiso de qualidade
+-Interface limpa e clara 
+-Resultado rapido
+-treinamento nao e necessario
+
+2.3.4)apendices
+2.3.4.1)modelos  astah UML + DFD 
+2.3.4.2)glossario palavras simbolos soma, subtracao, e significados
+2.3.5)indice
+
+2.4)Gerenciamento dos requisitos
+2.4.1)Correcao da Matriz de Rastreabilidade
+
+2.5)Documento de especificação suplementar 
+2.5.1)Atributos
+2.5.2)Priorizacao de Kano
