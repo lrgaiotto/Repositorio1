@@ -104,7 +104,12 @@ Autor: Lucas
 
 2.3.4)apendices
 2.3.4.1)modelos  astah UML + DFD 
-2.3.4.2)glossario palavras Start, Stop, Restart e Timer.
+2.3.4.2)glossario palavras 
+-Start: indica o inicio da contagem do timer apartir do 0.
+-Stop: indica a parada da contagem do timer 
+-Restart: Recomeca a contagem apartir do ponto de parada
+-Timer: Indica o contato da hora
+
 2.3.5)indice
 
 2.4)Gerenciamento dos requisitos
