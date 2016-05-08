@@ -17,7 +17,7 @@ responsavel: Lucas
 descricao: Efetuar o inicio da contagem do tempo
 trigger o que dispara esse caso de uso: botao contendo texto "Start"
 atores: usuario do cronometro
-pre-condicoes: assim que abrir o sistema, contador ja sera iniciado automaticamente
+pre-condicoes: tempo deve estar parado para comecar a contar o tempo
 pos-condicoes: comecara a contagem do relogio do 0.
 resultado: tempo de cronometro ira ser iniciado
 cenario principal: ator abre o sistema e pressiona o botao Start para iniciar a contagem do tempo
@@ -52,16 +52,31 @@ pos-condicoes: Registra uma track do tempo atual
 resultado: tempo de cronometro ira ser registrado
 cenario principal: ator abre o sistema e pressiona o botao Restart com proposito de recomecar  a contagem do tempo apartir do ponto de parada.
 
-caso de uso textual Timer:
+caso de uso textual Clean,
 identificador: 4
-nome: Soma
+nome: Clean
 prioridade: 1
 criticalidade: 1
 fonte da onde veio: Cliente
 responsavel: Lucas
-descricao: Efetuar operacao matematica
-trigger o que dispara esse caso de uso: botoes contento texto (start, stop e restart)
-atores: usuario da calculadora
+descricao: Retorna o relogio para 0 e reseta as "voltas" que estavam salvas.
+trigger o que dispara esse caso de uso: botao contendo texto "clean"
+atores: usuario do cronometro
+pre-condicoes: Cronometro pode estar em andamento ou parado para efetuar a limpeza
+pos-condicoes: Campos do registro de voltas vai ser zerado e contador iniciara do 0.
+resultado: todos os campos voltaram para o estado inicial
+cenario principal: ator clica no botao Clean com proposito de voltar o timer para 0 e limpar o registro de voltas salvas.
+
+caso de uso textual Timer:
+identificador: 5
+nome: Timer
+prioridade: 1
+criticalidade: 1
+fonte da onde veio: Cliente
+responsavel: Lucas
+descricao: Demonstrar horario do cronometro
+trigger o que dispara esse caso de uso: botoes contento texto (start, stop e clean)
+atores: usuario do cronometro
 pre-condicoes start: o tempo nao pode ja estar ativo
 pre-condicoes stop: o tempo nao pode ja estar parado
 pre-condicoes restart: o tempo deve estar parado 
@@ -152,6 +167,14 @@ Fonte:Eduardo
 Autor: Lucas
 
 identificador: 4
+nome: Clean
+descricao: Limpa os contadores
+Classificaçao KANO:esperado, satisfiers, requisito consciente
+responsabilidade:Lucas
+Fonte:Eduardo
+Autor: Lucas
+
+identificador: 5
 nome: Timer
 descricao: Mostra o horario
 Classificaçao KANO: Basico, dissatisfiers, requisitos subconscientes
