@@ -3,7 +3,7 @@ Atividade 2:
 - Metodo escolhido: entrevista
 
 2.2)Elaboracao de Casos de Uso
-- Sistema devera oferecer 4 funcoes para gerenciar o tempo (Start, Stop, Restart e um Timer)
+- Sistema devera oferecer 4 funcoes para gerenciar o tempo (Start,Stop, Track e um Timer)
 - No sistema, cada funcao devera conter um botao para realizar as operacoes
 - Sistema devera ter um display para mostrar o tempo.
 
@@ -17,7 +17,7 @@ responsavel: Lucas
 descricao: Efetuar o inicio da contagem do tempo
 trigger o que dispara esse caso de uso: botao contendo texto "Start"
 atores: usuario do cronometro
-pre-condicoes: tempo deve estar parado para conseguir pressionar o botao start
+pre-condicoes: assim que abrir o sistema, contador ja sera iniciado automaticamente
 pos-condicoes: comecara a contagem do relogio do 0.
 resultado: tempo de cronometro ira ser iniciado
 cenario principal: ator abre o sistema e pressiona o botao Start para iniciar a contagem do tempo
@@ -32,24 +32,24 @@ responsavel: Lucas
 descricao: Efetuar a parada do contagem do tempo
 trigger o que dispara esse caso de uso: botao contendo texto "Stop"
 atores: usuario do cronometro
-pre-condicoes: tempo deve estar ativo para conseguir pressionar o botao stop
+pre-condicoes: tempo deve estar ativo para o botao Stop ter efeito
 pos-condicoes: interrompe a contagem do relogio
 resultado: tempo de cronometro ira parar
 cenario principal: ator abre o sistema e pressiona o botao Stop com proposito de parar a contagem do tempo
 
-caso de uso textual Restart,
+caso de uso textual Track,
 identificador: 3
 nome: Restart
 prioridade: 1
 criticalidade: 1
 fonte da onde veio: Cliente
 responsavel: Lucas
-descricao: Efetuar o inicio da contagem do ponto de parada do contagem do tempo
-trigger o que dispara esse caso de uso: botao contendo texto "Stop"
+descricao: Efetuar o registro de uma track do tempo que esta em andamento
+trigger o que dispara esse caso de uso: botao contendo texto "Track"
 atores: usuario do cronometro
-pre-condicoes: tempo deve estar ativo para conseguir pressionar o botao stop
-pos-condicoes: interrompe a contagem do relogio
-resultado: tempo de cronometro ira parar
+pre-condicoes: tempo deve estar ativo para conseguir pressionar o botao Track para salvar o tempo
+pos-condicoes: Registra uma track do tempo atual
+resultado: tempo de cronometro ira ser registrado
 cenario principal: ator abre o sistema e pressiona o botao Restart com proposito de recomecar  a contagem do tempo apartir do ponto de parada.
 
 caso de uso textual Timer:
@@ -66,7 +66,7 @@ pre-condicoes start: o tempo nao pode ja estar ativo
 pre-condicoes stop: o tempo nao pode ja estar parado
 pre-condicoes restart: o tempo deve estar parado 
 resultado: indicar a contagem do tempo
-cenario principal: ator comeca a contagem de tempo usando botao start, mostrando o tempo no timer, em seguida é possivel parar o tempo e 2 opcoes sao possiveis, recomecar o tempo de onde parou ou reiniciar o tempo do 0. 
+cenario principal: sistema comeca a contagem automaticamente ao ser aberto, mostrando o tempo no timer, em seguida é possivel registrar Tracks de tempo e parar o tempo para reiniciar o timer.
 
 2.3)Documento de especificacao
 -Historico de revisao
@@ -80,10 +80,10 @@ Autor: Lucas
 
 2.3.1)introducao
 2.3.1.1)escopo
--Sistema desenvolvido para efetuar operacoes basicas matematicas
+-Sistema desenvolvido para efetuar operacoes de um cronometro
 
 2.3.1.2)descricao dos stakeholders
--Usuario do sistema
+-Usuario do sistema, Lucas, Eduardo e Professor Ivo.
 
 
 2.3.2)descricao geral
@@ -103,7 +103,7 @@ Autor: Lucas
 -treinamento nao e necessario
 
 2.3.4)apendices
-2.3.4.1)modelos  astah UML + DFD 
+2.3.4.1)Caso de Uso OK + DFD OK
 2.3.4.2)glossario palavras 
 -Start: indica o inicio da contagem do timer apartir do 0.
 -Stop: indica a parada da contagem do timer 
@@ -115,6 +115,46 @@ Autor: Lucas
 2.4)Gerenciamento dos requisitos
 2.4.1)Correcao da Matriz de Rastreabilidade
 
+ID	1	2	3	4
+1	-	R	R	R
+2	D	-	R	R
+3	D	-	-	R
+4	-	-	-	-
+
+Dependente
+Relacionado
+
 2.5)Documento de especificação suplementar 
-2.5.1)Atributos
-2.5.2)Priorizacao de Kano
+2.5.1)Tabelas (cartões) de atributos
+
+identificador: 1
+nome: start
+descricao: inicia a contagem do tempo
+Classificaçao KANO: esperado, satisfiers, requisito consciente
+responsabilidade:Lucas
+Fonte:Eduardo
+Autor:Lucas
+
+identificador: 2
+nome: stop
+descricao: interrompe a contagem do tempo 
+Classificaçao KANO: esperado, satisfiers, requisito consciente
+responsabilidade: Lucas
+Fonte: Eduardo
+Autor: Lucas
+
+identificador: 3
+nome: Track 
+descricao: Registra uma marca de tempo atual
+Classificaçao KANO:esperado, satisfiers, requisito consciente
+responsabilidade:Lucas
+Fonte:Eduardo
+Autor: Lucas
+
+identificador: 4
+nome: Timer
+descricao: Mostra o horario
+Classificaçao KANO: Basico, dissatisfiers, requisitos subconscientes
+responsabilidade: Lucas
+Fonte: Eduardo
+Autor: Lucas
